@@ -1,7 +1,7 @@
 import {getCustomProperty, incrementCustomProperty, setCustomProperty} from "./updateCustomProperty.js";
 
 
-const SPEED = 0.05
+const SPEED = 0.03
 const groundElems = document.querySelectorAll("[data-ground]")
 
 export function setupGround(){
@@ -11,7 +11,7 @@ export function setupGround(){
 }
 
 export function updateGround(delta, speedScale){
-    groundElems.forEach(ground=>{
+    groundElems.forEach(ground => {
         incrementCustomProperty(ground, "--left", delta * speedScale * SPEED * -1)
 
         if(getCustomProperty(ground, "--left") <= - 300) {

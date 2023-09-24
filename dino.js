@@ -6,7 +6,6 @@ const GRAVITY = 0.0015
 const DINO_FRAME_COUNT = 2
 const FRAME_TIME = 100
 
-
 let isJumping
 let dinoFrame
 let currentFrameTime
@@ -26,6 +25,13 @@ export function updateDino(delta, speedScale){
     handleJump(delta)
 }
 
+export function getDinoRect(){
+    return dinoElem.getBoundingClientRect()
+}
+
+export function setDinoLose(){
+    dinoElem.src = "imgs/dino-lose.png"
+}
 
 function handleRun(delta, speedScale){
     if (isJumping){
@@ -33,7 +39,7 @@ function handleRun(delta, speedScale){
         return
     }
 
-    if(currentFrameTime >= FRAME_TIME) {
+    if (currentFrameTime >= FRAME_TIME) {
         dinoFrame = (dinoFrame + 1) % DINO_FRAME_COUNT
         dinoElem.src = `imgs/dino-run-${dinoFrame}.png`
         currentFrameTime -= FRAME_TIME
@@ -45,7 +51,7 @@ function handleRun(delta, speedScale){
 function handleJump(delta){
     if(!isJumping) return
 
-    incrementCustomProperty(dinoElem, "--bottom", yVelocity * delta )
+    incrementCustomProperty(dinoElem, "--bottom", yVelocity * delta)
 
     if (getCustomProperty(dinoElem, "--bottom") <= 0){
         setCustomProperty(dinoElem, "--bottom", 0)
@@ -57,6 +63,7 @@ function handleJump(delta){
 
 function onJump(e){
     if(e.code !== "Space" || isJumping ) return
+
     yVelocity = JUMP_SPEED
     isJumping = true
 }

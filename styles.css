@@ -1,4 +1,4 @@
-*,*::before, *::after {
+*, *::before, *::after {
     box-sizing: border-box;
     user-select: none;
 }
@@ -17,14 +17,16 @@ body {
 }
 
 .score {
+    color: #535353;
     position: absolute;
     font-size: 3vmin;
-    right: 1vmin;
     top: 1vmin;
-
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .start-screen {
+    color: #535353;
     position: absolute;
     font-size: 5vmin;
     top: 50%;
@@ -32,8 +34,23 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.end-screen {
+    color: #535353;
+    position: absolute;
+    font-size: 5vmin;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+}
+
 .hide {
- display: none;
+    display: none;
+}
+
+.show {
+    display: flex;
 }
 
 .ground {
@@ -49,12 +66,12 @@ body {
     position: absolute;
     left: 1%;
     height: 30%;
-    bottom: calc(var(--bottom)* 1%);
+    bottom: calc(var(--bottom) * 1%);
 }
 
 .cactus {
     position: absolute;
-    left: calc(var(--left)* 1%);
+    left: calc(var(--left) * 1%);
     height: 30%;
     bottom: 0;
 }
