@@ -10,9 +10,9 @@ To run the game locally on your machine, follow these steps:
 
    ```bash
    git clone <repository_url>
-Open the project folder in your code editor.
+2. Open the project folder in your code editor.
 
-Open index.html in your web browser to play the game.
+3. Open index.html in your web browser to play the game.
 
 ## How to Play
 When you open the game, you'll see a start screen with the message "Press any key to Start."
