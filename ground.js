@@ -1,4 +1,4 @@
-import {getCustomProperty, incrementCustomProperty, setCustomProperty} from "./updateCustomProperty";
+import {getCustomProperty, incrementCustomProperty, setCustomProperty} from "./updateCustomProperty.js";
 
 
 const SPEED = 0.05

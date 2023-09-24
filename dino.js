@@ -1,4 +1,4 @@
-import {setCustomProperty, getCustomProperty, incrementCustomProperty} from "./updateCustomProperty";
+import {setCustomProperty, getCustomProperty, incrementCustomProperty} from "./updateCustomProperty.js";
 
 const dinoElem = document.querySelector("[data-dino]")
 const JUMP_SPEED = 0.45
