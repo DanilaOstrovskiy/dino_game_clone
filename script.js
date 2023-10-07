@@ -10,6 +10,7 @@ const worldElem = document.querySelector("[data-world]")
 const scoreElem = document.querySelector("[data-score]")
 const startScreenElem = document.querySelector("[data-start-screen]")
 const endScreenElem = document.querySelector("[data-end-screen]")
+const pageNotFound = document.querySelector('[data-404]')
 
 setPixelToWorldScale()
 
@@ -64,6 +65,7 @@ function updateScore(delta) {
 }
 
 function handleStart() {
+    pageNotFound.classList.add("hide")
     console.log("handleStart")
     endScreenElem.classList.remove("show")
     startScreenElem.classList.add("hide") // Hide the start screen

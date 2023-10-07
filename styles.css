@@ -9,6 +9,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    font-family: "better-vcr4.0", sans-serif;
+}
+
+@font-face {
+    font-family: 'better-vcr4.0';
+    src: url(font/better.woff2);
 }
 
 .world {
@@ -75,3 +81,11 @@ body {
     height: 30%;
     bottom: 0;
 }
+
+.pageNotFound {
+    text-align: center;
+    position: relative;
+    top: 45px;
+    color:#535353;
+}
+
